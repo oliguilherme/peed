@@ -12,15 +12,13 @@ int main() {
 }
 
 char * is_substring(char *haystack, char *needle) {
-    char *start = needle;
-
     while (*haystack) {
         char *h = haystack, *n = needle;
 
         while (*h && *n && *h == *n) {
             h++; n++;
         }
-        if (*n == '\0') return start;
+        if (*n == '\0') return needle;
 
         haystack++;
     }
